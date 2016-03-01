@@ -265,7 +265,6 @@ public class NameTags extends JavaPlugin implements Listener {
         this.saveConfig();
         if (this.getConfig().getBoolean(NameTags.CONFIG_REFRESH, false)) {
             this.refreshTaskID = this.getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
-                @Override
                 public void run() {
                     NameTags.this.playerRefresh();
                 }
@@ -297,7 +296,6 @@ public class NameTags extends JavaPlugin implements Listener {
         this.noLongNames = this.getConfig().getBoolean(NameTags.CONFIG_NOLONGNAMES, false);
         this.onlySeeSelf = this.getConfig().getBoolean(NameTags.CONFIG_ONLYSAME, false);
         this.getServer().getScheduler().runTaskLater(this, new Runnable() {
-            @Override
             public void run() {
                 NameTags.this.playerRefresh();
             }
