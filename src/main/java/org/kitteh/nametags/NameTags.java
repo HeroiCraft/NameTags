@@ -137,8 +137,8 @@ public class NameTags extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        if (!this.getServer().getPluginManager().isPluginEnabled("TagAPI")) {
-            this.getLogger().severe("TagAPI required. Get it at http://dev.bukkit.org/server-mods/tag/");
+        if (!this.getServer().getPluginManager().isPluginEnabled("TagAPI") && !this.getServer().getPluginManager().isPluginEnabled("iTag") && !this.getServer().getPluginManager().isPluginEnabled("iTag-API")) {
+            this.getLogger().severe("TagAPI, iTag or iTag-API required, disabling!");
             this.getServer().getPluginManager().disablePlugin(this);
             return;
         }
