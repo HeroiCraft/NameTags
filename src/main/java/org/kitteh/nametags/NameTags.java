@@ -145,7 +145,7 @@ public class NameTags extends JavaPlugin implements Listener {
         try {
             Class.forName("org.kitteh.tag.AsyncPlayerReceiveNameTagEvent");
         } catch (final ClassNotFoundException e) {
-            this.getLogger().severe("You need a newer version of TagAPI! Get it at http://dev.bukkit.org/server-mods/tag/");
+            this.getLogger().severe("You are running an outdated version of TagAPI, or a broken fork of it.");
             this.getServer().getPluginManager().disablePlugin(this);
             return;
         }
